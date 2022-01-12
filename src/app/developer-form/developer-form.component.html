@@ -1,0 +1,18 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+  <section fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="15px">
+    <mat-form-field [formGroup]="form">
+      <mat-label>Digite um username</mat-label>
+      <input
+        formControlName="username"
+        matInput
+        placeholder="Digite um username"
+      />
+    </mat-form-field>
+
+    <button (click)="searchProfile()" mat-raised-button color="primary">
+      Procurar
+    </button>
+  </section>
+
+  <app-developer-profile [profile]="profile"></app-developer-profile>
+</div>

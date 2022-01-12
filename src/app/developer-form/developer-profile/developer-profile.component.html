@@ -1,0 +1,23 @@
+<section
+  class="developer-profile"
+  fxLayout="column"
+  fxLayoutAlign="center center"
+  fxLayoutGap="20px"
+>
+  <img
+    class="developer-profile__avatar"
+    [src]="profile?.avatar_url"
+    alt="Avatar do perfil do github"
+  />
+  <p>{{ profile?.bio }}</p>
+
+  <div fxLayout="row" fxLayoutGap="center center" fxLayoutGap="10px">
+    <p>Localização: {{ profile?.location }}</p>
+    <p>Username: {{ profile?.login }}</p>
+  </div>
+
+  <div fxLayout="row" fxLayoutGap="center center" fxLayoutGap="10px">
+    <p>Seguidores: {{ profile?.followers }}</p>
+    <p>Seguindo: {{ profile?.following }}</p>
+  </div>
+</section>

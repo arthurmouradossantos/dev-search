@@ -1,0 +1,17 @@
+:host {
+  display: contents;
+}
+
+.developer-profile {
+  width: 40%;
+  height: 400px;
+  padding: 20px;
+  border: 0.5px solid #000000de;
+  border-radius: 4px;
+  margin-top: 50px;
+  &__avatar {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+  }
+}
