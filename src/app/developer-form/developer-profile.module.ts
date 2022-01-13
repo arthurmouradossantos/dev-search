@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
 
 import { DeveloperFormComponent } from './developer-form.component';
 import { DeveloperProfileComponent } from './developer-profile/developer-profile.component';
-import { ErrorDialogModule } from '../error-dialog/error-dialog.module';
+import { ErrorWarningModule } from '../error-warning/error-warning.module';
 
 @NgModule({
   declarations: [DeveloperFormComponent, DeveloperProfileComponent],
@@ -21,7 +21,7 @@ import { ErrorDialogModule } from '../error-dialog/error-dialog.module';
     MatButtonModule,
     HttpClientModule,
     CommonModule,
-    ErrorDialogModule,
+    ErrorWarningModule,
   ],
   exports: [DeveloperFormComponent],
 })

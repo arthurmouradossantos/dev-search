@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatDialogModule } from '@angular/material/dialog';
-import { ErrorDialogComponent } from './error-dialog.component';
+
+import { ErrorWarningComponent } from './error-warning.component';
 
 @NgModule({
-  declarations: [ErrorDialogComponent],
+  declarations: [ErrorWarningComponent],
   imports: [CommonModule, MatDialogModule],
 })
-export class ErrorDialogModule {}
+export class ErrorWarningModule {}

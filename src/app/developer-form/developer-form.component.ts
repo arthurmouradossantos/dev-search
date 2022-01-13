@@ -4,8 +4,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { Subscription } from 'rxjs';
 
 import { GithubService } from '../service/github.service';
-import { DeveloperProfile } from '../interfaces/developer-profile';
-import { ErrorDialogComponent } from '../error-dialog/error-dialog.component';
+import { DeveloperProfile, ResponseGithub } from '../developer-profile';
+import { ErrorWarningComponent } from '../error-warning/error-warning.component';
 
 @Component({
   selector: 'app-developer-form',
@@ -37,11 +37,11 @@ export class DeveloperFormComponent implements OnInit, OnDestroy {
     this.subscription = this.githubService
       .getDeveloperProfile(this.form.value.username)
       .subscribe({
-        next: (p: DeveloperProfile) => {
-          this.profile = p;
+        next: (reponseGithub: ResponseGithub) => {
+          this.profile = DeveloperProfile.from(reponseGithub);
         },
         error: () => {
-          this.dialog.open(ErrorDialogComponent);
+          this.dialog.open(ErrorWarningComponent);
         },
       });
   }

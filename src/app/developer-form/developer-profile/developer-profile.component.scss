@@ -15,3 +15,9 @@
     border-radius: 100%;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .developer-profile {
+    width: 80%;
+  }
+} ;

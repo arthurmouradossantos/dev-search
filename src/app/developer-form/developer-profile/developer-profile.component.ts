@@ -1,15 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { DeveloperProfile } from 'src/app/interfaces/developer-profile';
+import { Component, Input } from '@angular/core';
+import { DeveloperProfile } from 'src/app/developer-profile';
 
 @Component({
   selector: 'app-developer-profile',
   templateUrl: './developer-profile.component.html',
   styleUrls: ['./developer-profile.component.scss'],
 })
-export class DeveloperProfileComponent implements OnInit {
+export class DeveloperProfileComponent {
   @Input() profile!: DeveloperProfile;
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }

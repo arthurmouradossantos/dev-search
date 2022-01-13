@@ -6,18 +6,13 @@
 >
   <img
     class="developer-profile__avatar"
-    [src]="profile?.avatar_url"
+    [src]="profile?.avatar"
     alt="Avatar do perfil do github"
   />
   <p>{{ profile?.bio }}</p>
-
-  <div fxLayout="row" fxLayoutGap="center center" fxLayoutGap="10px">
-    <p>Localização: {{ profile?.location }}</p>
-    <p>Username: {{ profile?.login }}</p>
-  </div>
-
-  <div fxLayout="row" fxLayoutGap="center center" fxLayoutGap="10px">
-    <p>Seguidores: {{ profile?.followers }}</p>
-    <p>Seguindo: {{ profile?.following }}</p>
-  </div>
+  <p>Localização: {{ profile?.location }}</p>
+  <p>Username: {{ profile?.login }}</p>
+  <p>Seguidores: {{ profile?.followers }}</p>
+  <p>Seguindo: {{ profile?.followings }}</p>
+  <p>Repositórios: {{ profile?.publicRepositories }}</p>
 </section>
