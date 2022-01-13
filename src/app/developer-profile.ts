@@ -1,4 +1,28 @@
-export interface DeveloperProfile {
+export class DeveloperProfile {
+  private constructor(
+    public login: string,
+    public followers: number,
+    public followings: number,
+    public avatar: string,
+    public bio: string,
+    public publicRepositories: number,
+    public location: string
+  ) {}
+
+  static from(response: ResponseGithub): DeveloperProfile {
+    return new DeveloperProfile(
+      response.login,
+      response.followers,
+      response.following,
+      response.avatar_url,
+      response.bio,
+      response.public_repos,
+      response.location
+    );
+  }
+}
+
+export interface ResponseGithub {
   login: string;
   id: number;
   node_id: string;
